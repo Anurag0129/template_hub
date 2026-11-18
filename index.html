@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TemplateHub — Free Excel & Google Sheets Templates</title>
+    <meta name="description" content="Download free, professional Excel and Google Sheets templates. Budget trackers, invoices, project planners, expense reports, schedules, and inventory trackers — ready to use in seconds.">
+    <meta name="keywords" content="excel templates, google sheets templates, free spreadsheet templates, budget tracker, invoice template, project planner">
+    <meta name="author" content="TemplateHub">
+    <meta property="og:title" content="TemplateHub — Free Excel & Google Sheets Templates">
+    <meta property="og:description" content="Download free, professional spreadsheet templates for Excel and Google Sheets.">
+    <meta property="og:type" content="website">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📊</text></svg>">
+</head>
+<body>
+    <!-- Animated Background Orbs -->
+    <div class="bg-animation" aria-hidden="true">
+        <div class="bg-orb orb-1"></div>
+        <div class="bg-orb orb-2"></div>
+        <div class="bg-orb orb-3"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="container nav-container">
+            <a href="#" class="logo" id="logo">
+                <span class="logo-icon">📊</span>
+                <span class="logo-text">Template<span class="logo-accent">Hub</span></span>
+            </a>
+            <div class="nav-links" id="navLinks">
+                <a href="#templates" class="nav-link">Templates</a>
+                <a href="#features" class="nav-link">Features</a>
+                <a href="#templates" class="nav-cta" id="navCta">Get Started</a>
+            </div>
+            <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <div class="container hero-content">
+            <div class="hero-badge animate-on-scroll" id="heroBadge">
+                <span class="badge-sparkle">✨</span> 100% Free & Professional
+            </div>
+            <h1 class="hero-title animate-on-scroll" id="heroTitle">
+                Beautiful Templates for<br>
+                <span class="gradient-text">Excel & Google Sheets</span>
+            </h1>
+            <p class="hero-subtitle animate-on-scroll" id="heroSubtitle">
+                Download professionally designed spreadsheet templates. Budget trackers, invoices, 
+                project planners and more — ready to use in seconds.
+            </p>
+            <div class="search-wrapper animate-on-scroll" id="searchWrapper">
+                <svg class="search-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="11" cy="11" r="8"></circle>
+                    <path d="m21 21-4.3-4.3"></path>
+                </svg>
+                <input type="text" id="searchInput" placeholder="Search templates... (e.g. budget, invoice)" autocomplete="off">
+            </div>
+            <div class="hero-stats animate-on-scroll" id="heroStats">
+                <div class="stat-item">
+                    <span class="stat-number" id="statTemplates">6</span>
+                    <span class="stat-label">Templates</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat-item">
+                    <span class="stat-number">2</span>
+                    <span class="stat-label">Formats</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat-item">
+                    <span class="stat-number">Free</span>
+                    <span class="stat-label">Forever</span>
+                </div>
+            </div>
+        </div>
+        <div class="hero-scroll-indicator" aria-hidden="true">
+            <div class="scroll-arrow"></div>
+        </div>
+    </section>
+
+    <!-- Templates Section -->
+    <section class="templates-section" id="templates">
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <h2>Browse <span class="gradient-text">Templates</span></h2>
+                <p class="section-subtitle">Find the perfect spreadsheet template for your needs</p>
+            </div>
+            <div class="filter-bar animate-on-scroll" id="filterBar">
+                <button class="filter-btn active" data-category="all" id="filterAll">
+                    <span class="filter-icon">🗂️</span> All
+                </button>
+                <button class="filter-btn" data-category="finance" id="filterFinance">
+                    <span class="filter-icon">💰</span> Finance
+                </button>
+                <button class="filter-btn" data-category="business" id="filterBusiness">
+                    <span class="filter-icon">💼</span> Business
+                </button>
+                <button class="filter-btn" data-category="planning" id="filterPlanning">
+                    <span class="filter-icon">📅</span> Planning
+                </button>
+                <button class="filter-btn" data-category="tracking" id="filterTracking">
+                    <span class="filter-icon">📦</span> Tracking
+                </button>
+            </div>
+            <div class="template-grid" id="templateGrid">
+                <!-- Cards rendered by JS -->
+            </div>
+            <div class="no-results hidden" id="noResults">
+                <span class="no-results-icon">🔍</span>
+                <h3>No templates found</h3>
+                <p>Try adjusting your search or filter criteria</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features-section" id="features">
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <h2>Why <span class="gradient-text">TemplateHub</span>?</h2>
+                <p class="section-subtitle">Everything you need to get started instantly</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card animate-on-scroll" id="feature1">
+                    <div class="feature-icon-wrapper">
+                        <span class="feature-icon">🆓</span>
+                    </div>
+                    <h3>100% Free Forever</h3>
+                    <p>All templates are completely free to download and use. No sign-ups, no hidden fees, no premium tiers.</p>
+                </div>
+                <div class="feature-card animate-on-scroll" id="feature2">
+                    <div class="feature-icon-wrapper">
+                        <span class="feature-icon">⚡</span>
+                    </div>
+                    <h3>Ready to Use</h3>
+                    <p>Pre-built formulas, structured layouts, and sample data. Download, customize, and start working immediately.</p>
+                </div>
+                <div class="feature-card animate-on-scroll" id="feature3">
+                    <div class="feature-icon-wrapper">
+                        <span class="feature-icon">🎨</span>
+                    </div>
+                    <h3>Professional Design</h3>
+                    <p>Clean, modern layouts with proper formatting, color-coded sections, and intuitive organization.</p>
+                </div>
+                <div class="feature-card animate-on-scroll" id="feature4">
+                    <div class="feature-icon-wrapper">
+                        <span class="feature-icon">📱</span>
+                    </div>
+                    <h3>Works Everywhere</h3>
+                    <p>Compatible with Microsoft Excel, Google Sheets, LibreOffice, and all major spreadsheet applications.</p>
+                </div>
+                <div class="feature-card animate-on-scroll" id="feature5">
+                    <div class="feature-icon-wrapper">
+                        <span class="feature-icon">🔒</span>
+                    </div>
+                    <h3>No Account Required</h3>
+                    <p>Just browse, click download, and go. We respect your privacy — no data collection, no tracking.</p>
+                </div>
+                <div class="feature-card animate-on-scroll" id="feature6">
+                    <div class="feature-icon-wrapper">
+                        <span class="feature-icon">🔄</span>
+                    </div>
+                    <h3>Regular Updates</h3>
+                    <p>New templates added regularly. Bookmark this page and check back for the latest additions.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-card animate-on-scroll" id="ctaCard">
+                <h2>Ready to Boost Your Productivity?</h2>
+                <p>Browse our growing collection of professional templates and find the perfect one for your needs.</p>
+                <a href="#templates" class="cta-btn" id="ctaBtn">
+                    <span>Browse Templates</span>
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M5 12h14"></path>
+                        <path d="m12 5 7 7-7 7"></path>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer" id="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <a href="#" class="logo">
+                        <span class="logo-icon">📊</span>
+                        <span class="logo-text">Template<span class="logo-accent">Hub</span></span>
+                    </a>
+                    <p class="footer-tagline">Free professional spreadsheet templates for everyone.</p>
+                </div>
+                <div class="footer-links-group">
+                    <div class="footer-col">
+                        <h4>Templates</h4>
+                        <a href="#templates">Budget Tracker</a>
+                        <a href="#templates">Invoice Template</a>
+                        <a href="#templates">Project Planner</a>
+                    </div>
+                    <div class="footer-col">
+                        <h4>More Templates</h4>
+                        <a href="#templates">Expense Report</a>
+                        <a href="#templates">Weekly Schedule</a>
+                        <a href="#templates">Inventory Tracker</a>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Resources</h4>
+                        <a href="#features">Why TemplateHub</a>
+                        <a href="https://docs.google.com/spreadsheets" target="_blank" rel="noopener">Google Sheets</a>
+                        <a href="https://www.microsoft.com/excel" target="_blank" rel="noopener">Microsoft Excel</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 TemplateHub. All rights reserved. Made with ❤️ for productivity.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Toast Notification -->
+    <div class="toast" id="toast" role="alert" aria-live="polite">
+        <span class="toast-icon" id="toastIcon">✅</span>
+        <span class="toast-message" id="toastMessage">Template downloaded!</span>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
